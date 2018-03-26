@@ -28,6 +28,8 @@ function renderGrid() {
     grid = document.createElement('div');
     grid.id = 'grid';
 
+    grid.addEventListener("animationend", function () {console.log('animationend')});
+
     grid.style.width = (ratioW * size) + 'px';
     grid.style.height = (ratioH * size) + 'px';
 
@@ -54,12 +56,27 @@ function renderGrid() {
             if (letter.length > 1)
                 cell.classList.add('item');
 
+            //center
             if (i === centerX && j === centerY) {
                 // console.log(i + ' ' + j)
                 center = cell;
+                // center.innerHTML = '';
                 center.setAttribute("contenteditable", "true");
                 center.classList.add('center');
             }
+
+            //tail
+            for (let t = 0; t < positionTailX.length; t++) {
+
+                if (i + positionX - centerX === positionTailX[t] && j + positionY - centerY === positionTailY[t]) {
+                    // console.log(i + ' ' + j)
+                    // center = cell;
+                    // center.setAttribute("contenteditable", "true");
+                    cell.innerHTML = positionTailZ[t];
+                    cell.classList.add('tail');
+                }
+            }
+
 
             if (i + positionX - centerX === destinationX && j + positionY - centerY === destinationY) {
                 // console.log(i + ' ' + j)

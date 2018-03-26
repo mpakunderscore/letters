@@ -1,9 +1,13 @@
-let mapX = 200;
-let mapY = 200;
+let mapX = 2000;
+let mapY = 2000;
 let map = [mapX];
 
 let positionX = 10;
 let positionY = 10;
+
+let positionTailX = [11, 12, 13, 13];
+let positionTailY = [10, 10, 10, 11];
+let positionTailZ = ['<span title="Вас не видно">👓</span>', '🔪', '🔮', 4];
 
 let destinationX;
 let destinationY;

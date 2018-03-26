@@ -13,7 +13,8 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: ghostwhite;
+
+    background-color: lightgray;
 
     overflow: hidden;
 
@@ -24,7 +25,7 @@ html, body {
 #grid {
 
     /*width: 100%;*/
-    background-color: ghostwhite;
+    /*background-color: lightgray;*/
 
     transition: padding 500ms;
 }
@@ -145,6 +146,10 @@ html, body {
 
     z-index: 999;
     /*position:relative;*/
+}
+
+.tail {
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 #grid.right {
