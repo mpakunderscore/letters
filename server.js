@@ -8,7 +8,7 @@ let server = require('http').Server(app);
 
 let io = require('socket.io')(server);
 
-const socketPort = 5050;
+const socketPort = process.env.PORT || 5050;
 
 server.listen(socketPort, () => console.log('socket listening on: ' + socketPort));
 
