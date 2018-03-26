@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400&subset=cyrillic,cyrillic-ext,latin-ext');
+
+html, body {
+    margin: 0;
+    padding: 0;
+
+    height: 100%;
+
+    /*margin-left: 2px;*/
+    /*margin-top: 2px;*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: ghostwhite;
+
+    overflow: hidden;
+
+    font-family: 'Montserrat', sans-serif;
+    /*font-weight: 300;*/
+}
+
+#grid {
+
+    /*width: 100%;*/
+    background-color: ghostwhite;
+
+    transition: padding 500ms;
+}
+
+#grid.right {
+    animation: p-right 0.5s linear;
+}
+
+@keyframes p-right {
+    from {padding-left: 33px;}
+    to {padding: 0;}
+}
+
+#grid.top {
+    animation: p-top 0.5s linear;
+}
+
+@keyframes p-top {
+    from {padding-top: 33px;}
+    to {padding: 0;}
+}
+
+#grid.left {
+    animation: p-left 0.5s linear;
+}
+
+@keyframes p-left {
+    from {padding-right: 33px;}
+    to {padding: 0;}
+}
+
+#grid.bottom {
+    animation: p-bottom 0.5s linear;
+}
+
+@keyframes p-bottom {
+    from {padding-bottom: 33px;}
+    to {padding: 0;}
+}
+
+
+#grid.render {
+    /*animation: imganim 1s infinite linear both;*/
+}
+
+
+
+#grid:hover {
+    /*padding: 0;*/
+}
+
+#grid div {
+    position: relative;
+    float: left;
+    /*background-color: lightgreen;*/
+
+    cursor: default;
+
+    transition: background-color 0.1s;
+
+    text-align: center;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: space-around;*/
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    z-index: 1;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.cell {
+    --cell-width: 33px;
+
+    width: var(--cell-width);
+    height: var(--cell-width);
+    line-height: var(--cell-width);
+
+    position: relative;
+}
+
+.cell span {
+    /*padding-left: 6px;*/
+}
+
+[contenteditable]:focus {
+    outline: 0 solid transparent;
+}
+
+#grid div:hover {
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    /*background-color: white;*/
+    /*color: red;*/
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
+
+    /*transition: none;*/
+    /*transition: box-shadow 1s;*/
+    /*transition-timing-function: linear;*/
+
+    /*z-index: 2;*/
+}
+
+
+
+.center {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /*color: #ff6c18;*/
+    animation: shadow 0.5s linear;
+
+    z-index: 999;
+    /*position:relative;*/
+}
+
+#grid.right {
+
+}
+
+@keyframes shadow {
+    from {box-shadow: none;}
+    to {box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);}
+}
+
+.destination {
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+}
+
+.item {
+    z-index: 1;
+    background-color: rgba(255, 48, 19, 0.5);
+    /*box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);*/
+}
+
