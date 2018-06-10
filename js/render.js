@@ -1,6 +1,19 @@
+let time = new Date().getMilliseconds();
+
+let startRender = function (direction) {
+
+    console.log('startRender');
+
+    time = new Date().getMilliseconds();
+
+    document.getElementById('grid').classList.add(direction);
+}
+
 function renderGrid() {
 
-    console.log('renderGrid')
+    console.log('renderGrid');
+
+    console.log(new Date().getMilliseconds() - time);
 
     let size = cellSize;
 
@@ -28,7 +41,7 @@ function renderGrid() {
     grid = document.createElement('div');
     grid.id = 'grid';
 
-    grid.addEventListener("animationend", function () {console.log('animationend')});
+    grid.addEventListener("animationend", function() {renderGrid()});
 
     grid.style.width = (ratioW * size) + 'px';
     grid.style.height = (ratioH * size) + 'px';
@@ -95,6 +108,8 @@ function renderGrid() {
 }
 
 function smooth(direction) {
+
+    return;
     // grid.style['padding-right'] = '33px';
     grid.classList.add(direction);
 }

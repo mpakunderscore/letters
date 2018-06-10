@@ -49,7 +49,7 @@ function moveScreen() {
         positionX = positionX + 1;
         moveTimer = setTimeout(moveScreen, timeStep);
         renderGrid();
-        smooth('right');
+        // startRender('right');
         return;
     }
 
@@ -58,7 +58,7 @@ function moveScreen() {
         positionY = positionY + 1;
         moveTimer = setTimeout(moveScreen, timeStep);
         renderGrid();
-        smooth('top');
+        // startRender('top');
         return;
     }
 
@@ -67,7 +67,7 @@ function moveScreen() {
         positionX = positionX - 1;
         moveTimer = setTimeout(moveScreen, timeStep);
         renderGrid();
-        smooth('left');
+        // startRender('left');
         return;
     }
 
@@ -76,7 +76,7 @@ function moveScreen() {
         positionY = positionY - 1;
         moveTimer = setTimeout(moveScreen, timeStep);
         renderGrid();
-        smooth('bottom');
+        // startRender('bottom');
         return;
     }
 
@@ -91,28 +91,28 @@ document.addEventListener("keydown", function(event) {
     if (event.which === 39) {
         moveTail();
         positionX = positionX + 1;
-        renderGrid();
-        smooth('right');
+        // startRender('');
+        startRender('right');
     }
 
     if (event.which === 37) {
         moveTail();
         positionX = positionX - 1;
-        renderGrid();
-        smooth('left');
+        // startRender();
+        startRender('left');
     }
 
     if (event.which === 40) {
         moveTail();
         positionY = positionY + 1;
-        renderGrid();
-        smooth('top');
+        // startRender();
+        startRender('top');
     }
 
     if (event.which === 38) {
         moveTail();
         positionY = positionY - 1;
-        renderGrid();
-        smooth('bottom');
+        // startRender();
+        startRender('bottom');
     }
 });

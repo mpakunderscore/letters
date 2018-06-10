@@ -7,7 +7,7 @@ let positionY = 10;
 
 let positionTailX = [11, 12, 13, 13];
 let positionTailY = [10, 10, 10, 11];
-let positionTailZ = ['<span title="Вас не видно">👓</span>', '🔪', '🔮', 4];
+let positionTailZ = ['<span title="Вас не видно">👓</span>', '🔪', '⚠', 4];
 
 let destinationX;
 let destinationY;
@@ -16,7 +16,7 @@ let moveTimer;
 
 let cellSize = 33;
 
-let timeStep = 50;
+let timeStep = 100;
 
 let grid;
 
